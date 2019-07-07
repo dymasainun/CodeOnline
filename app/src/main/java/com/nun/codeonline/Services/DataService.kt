@@ -2,6 +2,7 @@ package com.nun.codeonline.Services
 
 import com.nun.codeonline.Model.Category
 import com.nun.codeonline.Model.Product
+import kotlin.contracts.Returns
 
 object DataService {
     val categories = listOf(
@@ -30,7 +31,7 @@ object DataService {
         Product("Nundymas Gray Hoodie","$8","hoodie3"),
         Product("Nundymas Black Hoodie","$6","hoodie4")
     )
-    val shirt = listOf(
+    val shirts = listOf(
         Product("Nundymas Shirt Graphic","$9","shirt1"),
         Product("Nundymas Light Gray","$8","shirt2"),
         Product("Nundymas Logo Graphic","$9","shirt3"),
@@ -41,7 +42,7 @@ object DataService {
 
     fun getProduct(category: String) : List<Product> {
         return when (category) {
-            "SHIRTS" -> shirt
+            "SHIRTS" -> shirts
             "HATS" -> hats
             "HOODIES" -> hoodies
             else -> digitalGood
