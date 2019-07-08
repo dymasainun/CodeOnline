@@ -35,7 +35,7 @@ class ProductsAdapter(val context: Context, val products: List<Product>) : Recyc
             val resourceId = context.resources.getIdentifier(product.image,"drawable", context.packageName)
             productImage?.setImageResource(resourceId)
             productName?.text = product.title
-            productPrice?.text = product.title
+            productPrice?.text = product.price
 
         }
     }
